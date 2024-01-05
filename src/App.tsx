@@ -1,25 +1,17 @@
 import React from 'react';
 import './App.css';
-import {Tabs, TabList, Tab, TabPanels, TabPanel} from '@chakra-ui/react'
+import {Tabs} from '@chakra-ui/react'
+import Body from './Body';
+import Nav from './Nav';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>My Web App</h1>
+        <h1>I'm Zak Lang</h1>
         <Tabs align="center">
-          <TabList>
-            <Tab>Home</Tab>
-            <Tab>About</Tab>
-            <Tab>Content</Tab>
-            <Tab>Contact</Tab>
-          </TabList>
-          <TabPanels>
-            <TabPanel>This is the Home Page</TabPanel>
-            <TabPanel>This is the About Page</TabPanel>
-            <TabPanel>This is the Content Page</TabPanel>
-            <TabPanel>This is the Contact Page</TabPanel>
-          </TabPanels>
+          <Nav/>
+          <Body/>
         </Tabs>
       </header>
       <main>
