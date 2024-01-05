@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Ibarra Real Nova', serif;
+}
+
+nav > ul > li{
+  display: inline;
+  margin: 10px;
+}
