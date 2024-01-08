@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { Box, Button, Stack } from '@chakra-ui/react'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Stack direction={{base: 'column', sm: 'row'}}>
+          <Box>
+            <h1>I'm Zak Lang</h1>
+          </Box>
+          <Stack direction={{base: "column", sm: "row"}}>
+            <Button>My Work</Button>
+            <Button>About Me</Button>
+            <Button>Adventures</Button>
+            <Button>Contact</Button>
+          </Stack>
+        </Stack>
       </header>
+      <main>
+        
+      </main>
     </div>
   );
 }
