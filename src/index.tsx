@@ -1,17 +1,44 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import './index.css';
-import App from './App';
-import ErrorPage from './error-page';
-import reportWebVitals from './reportWebVitals';
 import { ChakraProvider } from '@chakra-ui/react'
 
+import './index.css';
+
+import App from './App';
+import MyWork from './Components/MyWork';
+import AboutMe from './Components/AboutMe';
+import Empty from './Components/Empty';
+import ErrorPage from './error-page';
+import reportWebVitals from './reportWebVitals';
+
+
+
+// Setup Router
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+        element: <MyWork />
+      },
+      {
+        path: "about",
+        element: <AboutMe />
+      },
+{
+        path: "adventures",
+        element: <Empty />
+      },
+      {
+        path: "contact",
+        element: <Empty />
+      },
+    ]
   },
 ])
 
@@ -24,7 +51,6 @@ root.render(
     <ChakraProvider>
       <RouterProvider router={router}/>
     </ChakraProvider> 
-
   </React.StrictMode>
 );
 

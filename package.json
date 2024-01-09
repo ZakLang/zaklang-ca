@@ -24,7 +24,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "cy:run": "cypress run --browser chrome",
+    "e2e": "start-server-and-test start http://localhost:3000 cy:run",
     "test": "react-scripts test",
+    "all-tests": "test && e2e",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -46,6 +49,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "cypress": "^13.6.2",
+    "start-server-and-test": "^2.0.3"
   }
 }
