@@ -19,9 +19,6 @@ export default function App() {
             <ChakraLink as={ReactRouterLink} to='adventures'>{strings_en.header_nav_adventures}</ChakraLink>
             <ChakraLink as={ReactRouterLink} to='contact'>{strings_en.header_nav_contact}</ChakraLink>
           </Stack>
-          <Box>
-            <p>Language: English</p>
-          </Box>
         </Stack>
       </header>
       <main>
