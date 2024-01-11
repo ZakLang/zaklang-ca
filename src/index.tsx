@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 
 import './index.css';
 
@@ -13,7 +13,12 @@ import Empty from './Components/Empty';
 import ErrorPage from './error-page';
 import reportWebVitals from './reportWebVitals';
 
-
+const theme = extendTheme({
+  fonts: {
+    heading: `'Caveat', cursive`,
+    body: `'Nunito', sans-serif`,
+  }
+})
 
 // Setup Router
 const router = createBrowserRouter([
@@ -48,7 +53,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <RouterProvider router={router}/>
     </ChakraProvider> 
   </React.StrictMode>

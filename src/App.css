@@ -3,3 +3,30 @@
   padding: 0;
   text-align: center;
 }
+
+.base {
+  min-width: 280px;
+}
+header {
+  padding: 10px;
+}
+
+header h1 {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+  margin: 0 20px;
+}
+
+header a {
+  font-size: 1.1rem;
+  margin: 0 10px;
+}
+
+header a.active {
+  text-decoration: underline;
+}
+
+main {
+  min-height: calc(100vh - 100px);
+  background-color: azure;
+}

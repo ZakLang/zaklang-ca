@@ -2,22 +2,26 @@ import React from 'react';
 import './App.css';
 
 import { Box, Link as ChakraLink, Stack } from '@chakra-ui/react'
-import { Link as ReactRouterLink, Outlet } from 'react-router-dom';
+import { NavLink as ReactRouterLink, Outlet } from 'react-router-dom';
+import { strings_en } from './strings-en';
 
 export default function App() {
   return (
-    <div>
+    <div className='base'>
       <header>
-        <Stack direction={{base: 'column', sm: 'row'}}>
+        <Stack direction={{ base: 'column', md: 'row' }}>
           <Box>
-            <h1>I'm Zak Lang</h1>
+            <h1>{strings_en.header_slogan}</h1>
           </Box>
-          <Stack direction={{ base: "column", sm: "row" }}>
-            <ChakraLink as={ReactRouterLink} to="">My Work</ChakraLink>
-            <ChakraLink as={ReactRouterLink} to="about">About Me</ChakraLink>
-            <ChakraLink as={ReactRouterLink} to="adventures">Adventures</ChakraLink>
-            <ChakraLink as={ReactRouterLink} to="contact">Contact</ChakraLink>
+          <Stack align={{ md: 'flex-end' }} direction={{ base: 'column', md: 'row' }}>
+            <ChakraLink as={ReactRouterLink} to=''>{strings_en.header_nav_home}</ChakraLink>
+            <ChakraLink as={ReactRouterLink} to='about'>{strings_en.header_nav_about}</ChakraLink>
+            <ChakraLink as={ReactRouterLink} to='adventures'>{strings_en.header_nav_adventures}</ChakraLink>
+            <ChakraLink as={ReactRouterLink} to='contact'>{strings_en.header_nav_contact}</ChakraLink>
           </Stack>
+          <Box>
+            <p>Language: English</p>
+          </Box>
         </Stack>
       </header>
       <main>
